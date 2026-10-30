@@ -1,17 +1,43 @@
+
 <template>
-    <div class="min-h-screen bg-black text-white">
-        <div class="flex flex-col items-center pt-16 text-center">
-            <p class="text-5xl font-bold">404</p>
+  <section class="relative z-10 flex flex-col justify-center items-center text-center px-12 py-12 min-h-[80vh] gap-8">
 
-            <p class="mt-3 text-xl">Page not found</p>
+    <!-- PAGE TITLE -->
+    <h1 class="text-5xl font-extrabold mb-4 text-rose-950">
+      About Me
+    </h1>
 
-            <NuxtLink to="/" class="mt-6">
-                <img
-                src="/404-logo.png"
-                alt="404 LOGO"
-                class="j-20 w-20 object-contain"
-                />
-            </NuxtLink>
-        </div>
+    <!-- ABOUT ME INFORMATION -->
+    <div class="flex flex-col items-center gap-5 max-w-2xl">
+
+      <!-- PERSONAL INFORMATION -->
+      <div class="bg-rose-300 font-extrabold text-rose-950 rounded-2xl p-6 shadow-lg w-full max-w-md hover:-translate-y-1 hover:shadow-rose-950 transition duration-300">
+        <p class="text-sm leading-relaxed text-center">
+          I am a 2nd year college student studying Information Technology.
+          Currently interested in designing GUI's for school activities and projects.
+          Whenever I get free time, I like to spend my time in reading fanfictions,
+          watching movies, playing games on my laptop, and listening to music all day long.
+          When things get tuff I always try to look on the bright side and keep up a positive attitude.
+          Ofcourse food and drinks always gets me motivated.
+        </p>
+      </div>
+
+      <!-- PROFESSIONAL ASPIRATIONS -->
+      <div class="bg-rose-200 text-rose-950 font-extrabold rounded-2xl p-6 shadow-lg w-full max-w-md hover:-translate-y-1 hover:shadow-rose-950 transition duration-300">
+        <p class="text-sm leading-relaxed text-center">
+          My professional aspirations are centered on becoming a skilled front-end developer who build clean and responsive designs for websites.
+          I aim to continuously hone my skills in html, css, javascript, and java.
+          I would also like to work on my designing skills, picking the right colors, fonts, and designs to include in my next projects.
+          I will also aim to be a full-stack developer when the time comes.
+        </p>
+      </div>
+
     </div>
+  </section>
 </template>
+
+<script setup>
+useHead({
+  title: 'About | Yesha Opon'
+})
+</script>
