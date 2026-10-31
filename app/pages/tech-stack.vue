@@ -33,30 +33,36 @@ const techCategories = [
 </script>
 
 <template>
-  <main class="relative z-10 flex flex-col justify-center min-h-screen py-12">
+  <main class="relative z-10 flex flex-col items-center min-h-[80vh] pb-12">
 
+    <!-- PAGE TITLE -->
     <h1 class="text-5xl font-extrabold text-center text-rose-950">
       Tech Stack
     </h1>
 
-    <section
-      v-for="category in techCategories"
-      :key="category.title"
-      class="mt-12"
-    >
-      <h2 class="text-2xl text-center text-rose-950 font-extrabold">
-        {{ category.title }}
-      </h2>
+    <!-- TECH CATEGORIES -->
+    <div class="flex flex-col items-center gap-16 mt-8">
 
-      <div class="flex flex-wrap justify-center gap-6 px-10 py-4">
-        <Techstack
-          v-for="item in category.items"
-          :key="item.name"
-          :name="item.name"
-          :image="item.image"
-        />
-      </div>
-    </section>
+      <section
+        v-for="category in techCategories"
+        :key="category.title"
+        class="flex flex-col items-center"
+      >
+        <h2 class="text-2xl text-center text-rose-950 font-extrabold">
+          {{ category.title }}
+        </h2>
+
+        <div class="flex flex-wrap justify-center gap-8 px-10 pt-2 pb-4">
+          <Techstack
+            v-for="item in category.items"
+            :key="item.name"
+            :name="item.name"
+            :image="item.image"
+          />
+        </div>
+      </section>
+
+    </div>
 
   </main>
 </template>

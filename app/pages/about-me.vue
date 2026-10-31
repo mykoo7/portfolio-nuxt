@@ -1,14 +1,15 @@
 
 <template>
-  <section class="relative z-10 flex flex-col justify-center items-center text-center px-12 py-12 min-h-[80vh] gap-8">
+  <main class="relative z-10 flex flex-col items-center min-h-[80vh] pb-12">
 
     <!-- PAGE TITLE -->
-    <h1 class="text-5xl font-extrabold mb-4 text-rose-950">
+    <h1 class="text-5xl font-extrabold text-center text-rose-950 mb-12"
+    style="margin-bottom: 30px;">
       About Me
     </h1>
 
     <!-- ABOUT ME INFORMATION -->
-    <div class="flex flex-col items-center gap-5 max-w-2xl">
+    <section class="flex flex-col items-center gap-5 max-w-2xl px-12">
 
       <!-- PERSONAL INFORMATION -->
       <div class="bg-rose-300 font-extrabold text-rose-950 rounded-2xl p-6 shadow-lg w-full max-w-md hover:-translate-y-1 hover:shadow-rose-950 transition duration-300">
@@ -32,8 +33,9 @@
         </p>
       </div>
 
-    </div>
-  </section>
+    </section>
+
+  </main>
 </template>
 
 <script setup>

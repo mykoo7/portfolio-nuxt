@@ -3,10 +3,10 @@
 @plugin "daisyui";
 
 /* GENERAL STYLING */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@layer base {
+    * {
+        box-sizing: border-box;
+    }
 }
 
 body {
@@ -110,6 +110,10 @@ header {
         display: block;
         padding: 10px 0;
     }
+
+    .breadcrumbs li + li::before {
+    display: none;
+    }
 }
 
 /* ANIMATED BACKGROUND */
@@ -207,4 +211,8 @@ header {
         transform: translateY(-800px) rotate(360deg);
         opacity: 0;
     }
+}
+
+.page-container {
+    padding-top: 40px;
 }

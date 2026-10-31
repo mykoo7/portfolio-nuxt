@@ -35,13 +35,13 @@ function closeModal() {
 </script>
 
 <template>
-  <main class="relative z-10 flex flex-col justify-center py-12 min-h-[67vh] gap-8">
+  <main class="relative z-10 flex flex-col items-center min-h-[80vh] pb-12">
 
-    <h1 class="text-5xl font-extrabold text-center text-rose-950">
+    <h1 class="text-5xl font-extrabold text-center text-rose-950 mb-8">
       Certificates
     </h1>
 
-    <section class="flex justify-center mt-10 mb-12 px-6">
+    <section class="flex justify-center mt-5 mb-12 px-6">
       <div class="flex flex-wrap justify-center gap-6">
 
         <Certificates

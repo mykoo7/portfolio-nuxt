@@ -1,4 +1,3 @@
-
 <script setup>
 import { ref } from 'vue'
 
@@ -13,7 +12,9 @@ function toggleMenu() {
   <header :class="{ open: isMenuOpen }">
 
     <!-- LOGO -->
-    <div class="logo">MYKOO</div>
+    <NuxtLink to="/" class="logo">
+      MYKOO
+    </NuxtLink>
 
     <!-- MOBILE HAMBURGER -->
     <div

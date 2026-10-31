@@ -12,14 +12,14 @@ defineProps({
 </script>
 
 <template>
-  <div class="flex flex-col items-center gap-2 hover:text-rose-950 transition duration-300">
+  <div class="flex flex-col items-center gap-3 hover:text-rose-950 transition duration-300">
     <img
       :src="image"
       :alt="`${name} logo`"
-      class="w-20 h-20 object-contain rounded-xl shadow-md mix-blend-multiply"
+      class="w-24 h-24 object-contain rounded-xl shadow-md mix-blend-multiply"
     />
 
-    <p class="text-rose-950 font-extrabold">
+    <p class="text-lg text-rose-950 font-extrabold">
       {{ name }}
     </p>
   </div>
