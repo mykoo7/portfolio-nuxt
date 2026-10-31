@@ -1,11 +1,11 @@
 
 <script setup>
 import { ref } from 'vue'
-
+/*PAGE TITLE*/
 useHead({
   title: 'Certification | Yesha Opon'
 })
-
+/*LINKED TO CERTIFICATES COMPONENT AND LINKS TO VERIFICATION PAGE*/
 const certificates = [
   {
     name: 'Microsoft Word Associate',
@@ -19,7 +19,7 @@ const certificates = [
   }
 ]
 
-// Controls the certificate preview modal
+// CERT OPEN AND CLOSE
 const isModalOpen = ref(false)
 const selectedImage = ref('')
 
@@ -56,7 +56,7 @@ function closeModal() {
       </div>
     </section>
 
-    <!-- Certificate Preview Modal -->
+    <!--CERT DESIGN-->
     <div
       v-if="isModalOpen"
       class="fixed inset-0 bg-black/80 flex items-center justify-center z-50 cursor-pointer"

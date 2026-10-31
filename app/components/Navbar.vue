@@ -11,12 +11,14 @@ function toggleMenu() {
 <template>
   <header :class="{ open: isMenuOpen }">
 
-    <!-- LOGO -->
-    <NuxtLink to="/" class="logo">
+    <!--LOGO-->
+    <NuxtLink to="/" class="logo hover:text-rose-500 hover:scale-105
+         transition-all duration-300 cursor-pointer
+         hover:shadow-rose-950/40">
       MYKOO
     </NuxtLink>
 
-    <!-- MOBILE HAMBURGER -->
+    <!--MOBILE HAMBURGER-->
     <div
       id="hamburger"
       class="hamburger"
@@ -25,7 +27,7 @@ function toggleMenu() {
       {{ isMenuOpen ? '✖' : '☰' }}
     </div>
 
-    <!-- NAVIGATION -->
+    <!--NAVIGATION-->
     <div class="breadcrumbs">
       <ul>
         <li>

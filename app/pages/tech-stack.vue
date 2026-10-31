@@ -1,8 +1,9 @@
+<!--PAGE TITLE-->
 <script setup>
 useHead({
   title: 'Tech Stack | Yesha Opon'
 })
-
+/* LINKED TO CERTFICATES COMPONENTS SO THAT IMAGE AND NAME WILL CHANGE */
 const techCategories = [
   {
     title: 'Languages',
@@ -35,12 +36,12 @@ const techCategories = [
 <template>
   <main class="relative z-10 flex flex-col items-center min-h-[80vh] pb-12">
 
-    <!-- PAGE TITLE -->
+    <!--PAGE HEADER-->
     <h1 class="text-5xl font-extrabold text-center text-rose-950">
       Tech Stack
     </h1>
 
-    <!-- TECH CATEGORIES -->
+    <!--TECH STACK FORMAT-->
     <div class="flex flex-col items-center gap-16 mt-8">
 
       <section

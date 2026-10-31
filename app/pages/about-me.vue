@@ -2,20 +2,20 @@
 <template>
   <main class="relative z-10 flex flex-col items-center min-h-[80vh] pb-12">
 
-    <!-- PAGE TITLE -->
+    <!--PAGE HEADER-->
     <h1 class="text-5xl font-extrabold text-center text-rose-950 mb-12"
     style="margin-bottom: 30px;">
       About Me
     </h1>
 
-    <!-- ABOUT ME INFORMATION -->
+    <!--ABOUT ME-->
     <section class="flex flex-col items-center gap-5 max-w-2xl px-12">
 
-      <!-- PERSONAL INFORMATION -->
+      <!--INFORMATION -->
       <div class="bg-rose-300 font-extrabold text-rose-950 rounded-2xl p-6 shadow-lg w-full max-w-md hover:-translate-y-1 hover:shadow-rose-950 transition duration-300">
         <p class="text-sm leading-relaxed text-center">
-          I am a 2nd year college student studying Information Technology.
-          Currently interested in designing GUI's for school activities and projects.
+          I am a 3rd year college student studying Information Technology.
+          Currently interested in designing GUI's for school activities and projects along with exploring more about Computer Systems Servicing.
           Whenever I get free time, I like to spend my time in reading fanfictions,
           watching movies, playing games on my laptop, and listening to music all day long.
           When things get tuff I always try to look on the bright side and keep up a positive attitude.
@@ -23,7 +23,7 @@
         </p>
       </div>
 
-      <!-- PROFESSIONAL ASPIRATIONS -->
+      <!--INFORMATION-->
       <div class="bg-rose-200 text-rose-950 font-extrabold rounded-2xl p-6 shadow-lg w-full max-w-md hover:-translate-y-1 hover:shadow-rose-950 transition duration-300">
         <p class="text-sm leading-relaxed text-center">
           My professional aspirations are centered on becoming a skilled front-end developer who build clean and responsive designs for websites.
@@ -38,6 +38,7 @@
   </main>
 </template>
 
+<!--PAGE TITLE-->
 <script setup>
 useHead({
   title: 'About | Yesha Opon'

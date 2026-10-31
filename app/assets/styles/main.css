@@ -18,7 +18,7 @@ body {
     color: oklch(27.1% 0.105 12.094);
 }
 
-/* HEADER / NAVBAR */
+/* HEADER AND NAVBAR */
 header {
     position: relative;
     z-index: 20;
@@ -147,9 +147,22 @@ header {
     position: absolute;
     display: block;
     list-style: none;
+
     width: 25px;
-    height: 25px;
-    background: rgba(255,255,255,0.2);
+    height: 35px;
+
+    /* SAKURA PETAL SHAPE */
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.75),
+        rgba(255, 182, 193, 0.65),
+        rgba(232, 150, 174, 0.55)
+    );
+
+    border-radius: 100% 0 100% 0;
+
+    box-shadow: inset 2px 2px 5px rgba(255,255,255,0.4);
+
     animation: animate 20s linear infinite;
     bottom: -150px;
 }

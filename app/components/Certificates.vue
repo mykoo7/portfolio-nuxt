@@ -1,4 +1,4 @@
-
+<!--PASSES INFO OF THE CERT NAME AND PIC AND LINK FROM THE CERT PAGE-->
 <script setup>
 defineProps({
   name: {
@@ -17,9 +17,18 @@ defineProps({
 
 const emit = defineEmits(['preview'])
 </script>
-
+<!--CERT CARD DESIGN-->
 <template>
-  <div class="bg-rose-300 w-80 p-6 rounded-2xl shadow-md flex flex-col items-center text-center hover:-translate-y-1 hover:shadow-rose-950 hover:shadow-xl transition duration-300">
+  <div class="bg-rose-100/20 backdrop-blur-sm
+       border-2 border-rose-400/70
+       w-80 p-6 rounded-2xl
+       flex flex-col items-center text-center
+       shadow-lg shadow-rose-950/30
+       hover:bg-rose-100/30
+       hover:border-rose-500
+       hover:-translate-y-1
+       hover:shadow-xl hover:shadow-rose-950/40
+       transition duration-300">
 
     <img
       :src="image"
