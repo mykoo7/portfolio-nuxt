@@ -28,7 +28,7 @@
         <!--GITHUB PLUS LOGO FROM PHOSPHOR ICONS-->
         <a href="https://github.com/mykoo7" target="_blank" rel="noopener noreferrer" class="inline-block"
         >
-          <img src="/images/index/github.png" 
+          <img src="/images/index/github-logo.png" 
             alt="GitHub"
             class="max-w-full h-auto rounded-lg hover:shadow-rose-950 hover:-translate-y-1 hover:shadow-xl transition duration-300 mix-blend-multiply"
           />
@@ -38,7 +38,7 @@
 
         <a href="https://www.linkedin.com/in/mykoopon/" target="_blank" rel="noopener noreferrer" class="inline-block"
         >
-          <img src="/images/index/linkedin.png"
+          <img src="/images/index/linkedin-logo.png"
             alt="LinkedIn"
             class="max-w-full h-auto rounded-lg hover:shadow-rose-950 hover:-translate-y-1 hover:shadow-xl transition duration-300 mix-blend-multiply"
           />
