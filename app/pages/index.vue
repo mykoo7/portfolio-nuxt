@@ -25,16 +25,16 @@
           Contact Me
         </p>
 
-        <!--GITHUB-->
+        <!--GITHUB PLUS LOGO FROM PHOSPHOR ICONS-->
         <a href="https://github.com/mykoo7" target="_blank" rel="noopener noreferrer" class="inline-block"
         >
-          <img src="/images/index/github.png"
+          <img src="/images/index/github.png" 
             alt="GitHub"
             class="max-w-full h-auto rounded-lg hover:shadow-rose-950 hover:-translate-y-1 hover:shadow-xl transition duration-300 mix-blend-multiply"
           />
         </a>
 
-        <!--LINKEDIN-->
+        <!--LINKEDIN PLUS LOGO FROM PHOSPHOR ICONS-->
 
         <a href="https://www.linkedin.com/in/mykoopon/" target="_blank" rel="noopener noreferrer" class="inline-block"
         >

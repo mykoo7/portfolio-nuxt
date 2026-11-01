@@ -13,9 +13,13 @@
       :href="verificationUrl"
       target="_blank"
       rel="noopener noreferrer"
-      class="text-rose-950 text-lg font-extrabold hover:underline"
+      class="text-rose-950 text-lg font-extrabold"
     >
+      <span class="inline-flex items-center gap-2 hover:underline">
       {{ name }}
+
+        <img src="/images/certifications/verified.png" alt="Verified" class="w-5 h-5 shrink-0"/> <!--VERIFICATION LOGO FROM LUCIDE ICONS-->
+      </span>
     </a>
 
   </div>
