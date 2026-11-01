@@ -1,26 +1,13 @@
-<script setup>
-import { ref } from 'vue'
-
-const isMenuOpen = ref(false)
-
-function toggleMenu() {
-  isMenuOpen.value = !isMenuOpen.value
-}
-</script>
-
 <template>
   <header :class="{ open: isMenuOpen }">
 
     <!--LOGO-->
-    <NuxtLink to="/" class="logo hover:text-rose-500 hover:scale-105
-         transition-all duration-300 cursor-pointer
-         hover:shadow-rose-950/40">
+    <NuxtLink to="/" class="logo hover:text-rose-500 hover:scale-105 transition-all duration-300 cursor-pointer hover:shadow-rose-950/40">
       MYKOO
     </NuxtLink>
 
     <!--MOBILE HAMBURGER-->
-    <div
-      id="hamburger"
+    <div id="hamburger"
       class="hamburger"
       @click="toggleMenu"
     >
@@ -58,3 +45,13 @@ function toggleMenu() {
 
   </header>
 </template>
+
+<script setup>
+import { ref } from 'vue'
+
+const isMenuOpen = ref(false)
+
+function toggleMenu() {
+  isMenuOpen.value = !isMenuOpen.value
+}
+</script>

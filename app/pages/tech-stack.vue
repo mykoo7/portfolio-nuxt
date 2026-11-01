@@ -1,9 +1,42 @@
+<template>
+  <main class="relative z-10 flex flex-col items-center min-h-[80vh] pb-12">
+
+    <!--PAGE HEADER-->
+    <h1 class="text-5xl font-extrabold text-center text-rose-950">
+      Tech Stack
+    </h1>
+
+    <!--TECH STACK DESIGN-->
+    <div class="flex flex-col items-center gap-16 mt-8">
+
+      <section
+        v-for="category in techCategories"
+        :key="category.title"
+        class="flex flex-col items-center"
+      >
+        <h2 class="text-2xl text-center text-rose-950 font-extrabold">
+          {{ category.title }}
+        </h2>
+
+        <div class="flex flex-wrap justify-center gap-8 px-10 pt-2 pb-4">
+          <Techstack
+            v-for="item in category.items"
+            :key="item.name"
+            :name="item.name"
+            :image="item.image"
+          />
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+</template>
+
 <!--PAGE TITLE-->
 <script setup>
-useHead({
-  title: 'Tech Stack | Yesha Opon'
-})
-/* LINKED TO CERTFICATES COMPONENTS SO THAT IMAGE AND NAME WILL CHANGE */
+
+/* LINKED TO TECHSTACK COMPONENTS SO THAT IMAGE AND NAME WILL CHANGE */
 const techCategories = [
   {
     title: 'Languages',
@@ -31,39 +64,17 @@ const techCategories = [
     ]
   }
 ]
+
+useHead({
+  title: 'Tech Stack | Yesha Opon'
+})
+
+useSeoMeta({
+  title: 'Tech Stack | Yesha Opon',
+  ogTitle: 'Tech Stack | Yesha Opon',
+  description: 'Languages, Databases, and Tools that I use.',
+  ogDescription: 'Languages, Databases, and Tools that I use.',
+  ogImage: '/images/index/opon-profile.jpg',
+  twitterCard: 'summary_large_image',
+})
 </script>
-
-<template>
-  <main class="relative z-10 flex flex-col items-center min-h-[80vh] pb-12">
-
-    <!--PAGE HEADER-->
-    <h1 class="text-5xl font-extrabold text-center text-rose-950">
-      Tech Stack
-    </h1>
-
-    <!--TECH STACK FORMAT-->
-    <div class="flex flex-col items-center gap-16 mt-8">
-
-      <section
-        v-for="category in techCategories"
-        :key="category.title"
-        class="flex flex-col items-center"
-      >
-        <h2 class="text-2xl text-center text-rose-950 font-extrabold">
-          {{ category.title }}
-        </h2>
-
-        <div class="flex flex-wrap justify-center gap-8 px-10 pt-2 pb-4">
-          <Techstack
-            v-for="item in category.items"
-            :key="item.name"
-            :name="item.name"
-            :image="item.image"
-          />
-        </div>
-      </section>
-
-    </div>
-
-  </main>
-</template>

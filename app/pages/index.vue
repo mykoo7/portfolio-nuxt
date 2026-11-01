@@ -5,8 +5,7 @@
 
       <!--MY IMAGE-->
       <div class="w-40 h-40 sm:w-52 sm:h-52 md:w-60 md:h-60 rounded-full overflow-hidden border-4 border-rose-900">
-        <img
-          src="/images/index/opon-profile.jpg"
+        <img src="/images/index/opon-profile.jpg"
           alt="Yesha's Profile"
           class="w-full h-full object-cover"
         />
@@ -27,14 +26,9 @@
         </p>
 
         <!--GITHUB-->
-        <a
-          href="https://github.com/mykoo7"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-block"
+        <a href="https://github.com/mykoo7" target="_blank" rel="noopener noreferrer" class="inline-block"
         >
-          <img
-            src="/images/index/github.png"
+          <img src="/images/index/github.png"
             alt="GitHub"
             class="max-w-full h-auto rounded-lg hover:shadow-rose-950 hover:-translate-y-1 hover:shadow-xl transition duration-300 mix-blend-multiply"
           />
@@ -42,14 +36,9 @@
 
         <!--LINKEDIN-->
 
-        <a
-          href="https://www.linkedin.com/in/mykoopon/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-block"
+        <a href="https://www.linkedin.com/in/mykoopon/" target="_blank" rel="noopener noreferrer" class="inline-block"
         >
-          <img
-            src="/images/index/linkedin.png"
+          <img src="/images/index/linkedin.png"
             alt="LinkedIn"
             class="max-w-full h-auto rounded-lg hover:shadow-rose-950 hover:-translate-y-1 hover:shadow-xl transition duration-300 mix-blend-multiply"
           />
@@ -59,9 +48,18 @@
     </section>
 </template>
 
-<!--PAGE TITLE-->
+<!--PAGE TITLE/ SEO META TAGS-->
 <script setup>
 useHead({
   title: 'Home | Yesha Opon'
+})
+
+useSeoMeta({
+  title: 'Home | Yesha Opon',
+  ogTitle: 'Home | Yesha Opon',
+  description: 'Aspring front-end developer and student.',
+  ogDescription: 'Aspiring front-end developer and student.',
+  ogImage: '/images/index/opon-profile.jpg',
+  twitterCard: 'summary_large_image',
 })
 </script>

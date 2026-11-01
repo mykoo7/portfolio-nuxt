@@ -38,9 +38,18 @@
   </main>
 </template>
 
-<!--PAGE TITLE-->
+<!--PAGE TITLE/ SEO META TAGS-->
 <script setup>
 useHead({
   title: 'About | Yesha Opon'
+})
+
+useSeoMeta({
+  title: 'About | Yesha Opon',
+  ogTitle: 'About | Yesha Opon',
+  description: 'More about Yesha.',
+  ogDescription: 'More about Yesha.',
+  ogImage: '/images/index/opon-profile.jpg',
+  twitterCard: 'summary_large_image',
 })
 </script>

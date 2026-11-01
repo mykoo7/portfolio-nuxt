@@ -1,11 +1,3 @@
-<script setup>
-defineProps({
-    error: Object
-})
-
-const handleError = () => clearError({ redirect: '/' })
-</script>
-
 <template>
     <div class="min-h-screen relative flex flex-col items-center justify-center text-center">
 
@@ -25,8 +17,7 @@ const handleError = () => clearError({ redirect: '/' })
 
             <!--404 LOGO-->
             <NuxtLink to="/" @click="handleError" class="mt-6">
-                <img
-                    src="/images/error/404-logo.png"
+                <img src="/images/error/404-logo.png"
                     alt="Back to Home"
                     class="h-20 w-20 object-contain"
                 />
@@ -35,9 +26,7 @@ const handleError = () => clearError({ redirect: '/' })
             <!--BACK TO HOME BUTTON-->
             <button
                 @click="handleError"
-                class="mt-6 rounded-full border-2 border-rose-950 px-6 py-2
-                       text-rose-950 hover:bg-rose-950 hover:text-white
-                       transition duration-300"
+                class="mt-6 rounded-full border-2 border-rose-950 px-6 py-2 text-rose-950 hover:bg-rose-950 hover:text-white transition duration-300"
             >
                 Go Back Home
             </button>
@@ -45,3 +34,16 @@ const handleError = () => clearError({ redirect: '/' })
         </div>
     </div>
 </template>
+
+<script setup>
+
+useHead({
+    title: '404 | Page Not Found'
+})
+
+defineProps({
+    error: Object
+})
+
+const handleError = () => clearError({ redirect: '/' })
+</script>

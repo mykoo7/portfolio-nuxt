@@ -1,39 +1,3 @@
-
-<script setup>
-import { ref } from 'vue'
-/*PAGE TITLE*/
-useHead({
-  title: 'Certification | Yesha Opon'
-})
-/*LINKED TO CERTIFICATES COMPONENT AND LINKS TO VERIFICATION PAGE*/
-const certificates = [
-  {
-    name: 'Microsoft Word Associate',
-    image: '/images/certifications/ms-word-associate.jpg',
-    verificationUrl: 'https://www.certiport.com/portal/pages/credentialverification.aspx'
-  },
-  {
-    name: 'Microsoft PowerPoint Associate',
-    image: '/images/certifications/ms-powerpoint-associate.jpg',
-    verificationUrl: 'https://www.certiport.com/portal/pages/credentialverification.aspx'
-  }
-]
-
-// CERT OPEN AND CLOSE
-const isModalOpen = ref(false)
-const selectedImage = ref('')
-
-function openModal(image) {
-  selectedImage.value = image
-  isModalOpen.value = true
-}
-
-function closeModal() {
-  isModalOpen.value = false
-  selectedImage.value = ''
-}
-</script>
-
 <template>
   <main class="relative z-10 flex flex-col items-center min-h-[80vh] pb-12">
 
@@ -71,3 +35,50 @@ function closeModal() {
 
   </main>
 </template>
+
+
+<script setup>
+
+/*LINKED TO CERTIFICATES COMPONENT AND LINKS TO VERIFICATION PAGE*/
+const certificates = [
+  {
+    name: 'Microsoft Word Associate',
+    image: '/images/certifications/ms-word-associate.jpg',
+    verificationUrl: 'https://www.certiport.com/portal/pages/credentialverification.aspx'
+  },
+  {
+    name: 'Microsoft PowerPoint Associate',
+    image: '/images/certifications/ms-powerpoint-associate.jpg',
+    verificationUrl: 'https://www.certiport.com/portal/pages/credentialverification.aspx'
+  }
+]
+
+// CERT OPEN AND CLOSE
+const isModalOpen = ref(false)
+const selectedImage = ref('')
+
+function openModal(image) {
+  selectedImage.value = image
+  isModalOpen.value = true
+}
+
+function closeModal() {
+  isModalOpen.value = false
+  selectedImage.value = ''
+}
+
+import { ref } from 'vue'
+/*PAGE TITLE*/
+useHead({
+  title: 'Certification | Yesha Opon'
+})
+
+useSeoMeta({
+  title: 'Certificates | Yesha Opon',
+  ogTitle: 'Certificates | Yesha Opon',
+  description: 'Certificates earned by Yesha Opon.',
+  ogDescription: 'Certificates earned by Yesha Opon.',
+  ogImage: '/images/index/opon-profile.jpg',
+  twitterCard: 'summary_large_image',
+})
+</script>
