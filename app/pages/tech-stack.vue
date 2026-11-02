@@ -27,7 +27,11 @@
           />
         </div>
       </section>
-
+    <!--BUTTON TO GO TO SKILLS DASHBOARD ECHART PAGE-->
+      <NuxtLink to="skills-echart" class="inline-flex items-center gap-2 bg-rose-900 text-white px-6 py-3 rounded-xl hover:bg-rose-950 hover:-translate-1 transition duration-300 shadow-lg shadow-rose-950/30">
+        Explore My Skills Dashboard
+        <span></span>
+      </NuxtLink>
     </div>
 
   </main>
