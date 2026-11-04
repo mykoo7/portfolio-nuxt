@@ -6,9 +6,12 @@ import { ref, computed, watch, onMounted, onBeforeUnmount } from 'vue'
 const username = 'mykoo7'
 
 // STORING THE RETRIEVED DATA
-const events = ref([])
+const commits = ref([])
 const repositories = ref([])
 const lastUpdated = ref(null)
+
+// SELECTED DATE RANGE
+const selectedRange = ref(30)
 
 // TRACKING LOADING AND ERRORS
 const isLoading = ref(false)
@@ -20,14 +23,37 @@ async function fetchGithubData() {
   errorMessage.value = ''
 
   try {
-    const [eventData, repositoryData] = await Promise.all([
-      $fetch(`https://api.github.com/users/${username}/events/public?per_page=100`),
+    // GET PUBLIC REPOSITORIES
+    const repositoryData = await $fetch(
+      `https://api.github.com/users/${username}/repos?per_page=100`
+    )
 
-      $fetch(`https://api.github.com/users/${username}/repos?per_page=100`)
-    ])
-
-    events.value = eventData
     repositories.value = repositoryData
+
+    // GET COMMITS FROM THE LAST 30 DAYS
+    const since = new Date()
+    since.setDate(since.getDate() - 30)
+
+    const sinceDate = since.toISOString()
+
+    // FETCH COMMITS FROM EACH REPOSITORY
+    const commitData = await Promise.all(
+      repositoryData.map(repo =>
+        $fetch(
+          `https://api.github.com/repos/${username}/${repo.name}/commits`,
+          {
+            params: {
+              author: username,
+              since: sinceDate,
+              per_page: 100
+            }
+          }
+        )
+      )
+    )
+
+    // COMBINE ALL REPOSITORY COMMITS
+    commits.value = commitData.flat()
 
     lastUpdated.value = new Date()
 
@@ -44,10 +70,6 @@ async function fetchGithubData() {
 
 // FETCHING DATA WHEN THE COMPONENT LOADS
 await fetchGithubData()
-
-
-// SELECTED DATE RANGE
-const selectedRange = ref(30)
 
     //FORMAT DATE TO PH
   function formatDate(date) {
@@ -69,8 +91,8 @@ const dailyActivity = computed(() => {
 
     const dateKey = formatDate(date)
 
-    const count = events.value.filter(event => {
-      return formatDate(new Date(event.created_at)) === dateKey
+    const count = commits.value.filter(commit => {
+      return formatDate(new Date(commit.commit.author.date)) === dateKey
     }).length
 
     activity.push({
@@ -261,7 +283,7 @@ onBeforeUnmount(() => {
 
       <!--TOTAL ACTIVITIES-->
       <div class="bg-rose-100/20 backdrop-blur-sm border-2 border-rose-400/70 rounded-2xl p-5 shadow-lg shadow-rose-950/20">
-        <p class="text-sm text-rose-900">Total Recorded Activities</p>
+        <p class="text-sm text-rose-900">Total Commits</p>
         <h2 class="text-4xl font-extrabold text-rose-950 mt-3">
           {{ totalActivities }}
         </h2>
@@ -298,11 +320,11 @@ onBeforeUnmount(() => {
         <!--ECHART DESIGN-->
       <div class="mt-10 w-full bg-rose-100/20 backdrop-blur-sm border-2 border-rose-400/70 rounded-2xl p-5 shadow-lg shadow-rose-950/20">
         <h2 class="text-2xl font-extrabold text-rose-950 text-center">
-          Daily Github Activity
+          Daily Github Commit Activity
         </h2>
 
         <p class="text-sm text-rose-900 text-center mt-2">
-          Number of recorded public activities per day.
+          Number of commits recorded per day.
         </p>
 
         <div ref="activityChartElement" class="w-full h-[400px] mt-5">
