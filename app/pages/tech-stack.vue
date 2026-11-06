@@ -75,10 +75,10 @@ useHead({
 
 useSeoMeta({
   title: 'Tech Stack | Yesha Opon',
-  ogTitle: 'Tech Stack | Yesha Opon',
   description: 'Languages, Databases, and Tools that I use.',
+  ogTitle: 'Tech Stack | Yesha Opon',
   ogDescription: 'Languages, Databases, and Tools that I use.',
-  ogImage: '/images/index/opon-profile.jpg',
+  ogImage: '/images/opon-profile.jpg',
   twitterCard: 'summary_large_image',
 })
 </script>

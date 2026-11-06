@@ -46,10 +46,10 @@ useHead({
 
 useSeoMeta({
   title: 'About | Yesha Opon',
-  ogTitle: 'About | Yesha Opon',
   description: 'More about Yesha.',
+  ogTitle: 'About | Yesha Opon',
   ogDescription: 'More about Yesha.',
-  ogImage: '/images/index/opon-profile.jpg',
+  ogImage: '/images/opon-profile.jpg',
   twitterCard: 'summary_large_image',
 })
 </script>

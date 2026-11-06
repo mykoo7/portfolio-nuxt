@@ -33,10 +33,10 @@ useHead({
 
 useSeoMeta({
   title: 'GitHub Activity | Yesha Opon',
-  ogTitle: 'GitHub Activity | Yesha Opon',
   description: 'An overview of my recent public GitHub commits and developmnent activity.',
+  ogTitle: 'GitHub Activity | Yesha Opon',
   ogDescription: 'An overview of my recent public GitHub commits and developmnent activity.',
-  ogImage: '/images/index/opon-profile.jpg',
+  ogImage: '/images/opon-profile.jpg',
   twitterCard: 'summary_large_image',
 })
 </script>

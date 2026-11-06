@@ -75,10 +75,10 @@ useHead({
 
 useSeoMeta({
   title: 'Certificates | Yesha Opon',
-  ogTitle: 'Certificates | Yesha Opon',
   description: 'Certificates earned by Yesha Opon.',
+  ogTitle: 'Certificates | Yesha Opon',
   ogDescription: 'Certificates earned by Yesha Opon.',
-  ogImage: '/images/index/opon-profile.jpg',
+  ogImage: '/images/opon-profile.jpg',
   twitterCard: 'summary_large_image',
 })
 </script>

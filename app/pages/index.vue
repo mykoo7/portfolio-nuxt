@@ -5,7 +5,7 @@
 
       <!--MY IMAGE-->
       <div class="w-40 h-40 sm:w-52 sm:h-52 md:w-60 md:h-60 rounded-full overflow-hidden border-4 border-rose-900">
-        <img src="/images/index/opon-profile.jpg"
+        <img src="/images/opon-profile.jpg"
           alt="Yesha's Profile"
           class="w-full h-full object-cover"
         />
@@ -50,10 +50,10 @@ useHead({
 
 useSeoMeta({
   title: 'Home | Yesha Opon',
-  ogTitle: 'Home | Yesha Opon',
   description: 'Aspring front-end developer and student.',
+  ogTitle: 'Home | Yesha Opon',
   ogDescription: 'Aspiring front-end developer and student.',
-  ogImage: '/images/index/opon-profile.jpg',
+  ogImage: '/images/opon-profile.jpg',
   twitterCard: 'summary_large_image',
 })
 </script>
