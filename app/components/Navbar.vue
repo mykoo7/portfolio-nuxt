@@ -19,24 +19,28 @@
       <ul>
         <li>
           <NuxtLink to="/" @click="isMenuOpen = false">
+            <PhHouse :size="20" weight="regular" />
             Home
           </NuxtLink>
         </li>
 
         <li>
           <NuxtLink to="/about-me" @click="isMenuOpen = false">
+            <PhUser :size="20" weight="regular" />
             About
           </NuxtLink>
         </li>
 
         <li>
           <NuxtLink to="/tech-stack" @click="isMenuOpen = false">
+            <PhCode :size="20" weight="regular" />
             Tech Stack
           </NuxtLink>
         </li>
 
         <li>
           <NuxtLink to="/cert" @click="isMenuOpen = false">
+            <PhCertificate :size="20" weight="regular" />
             Certification
           </NuxtLink>
         </li>
@@ -47,6 +51,7 @@
 </template>
 
 <script setup>
+import {PhHouse, PhUser, PhCode, PhCertificate} from '@phosphor-icons/vue' // USE PHOSPHOR ICON
 import { ref } from 'vue'
 
 const isMenuOpen = ref(false)

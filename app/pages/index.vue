@@ -26,22 +26,14 @@
         </p>
 
         <!--GITHUB PLUS LOGO FROM PHOSPHOR ICONS-->
-        <a href="https://github.com/mykoo7" target="_blank" rel="noopener noreferrer" class="inline-block"
-        >
-          <img src="/images/index/github-logo.png" 
-            alt="GitHub"
-            class="max-w-full h-auto rounded-lg hover:shadow-rose-950 hover:-translate-y-1 hover:shadow-xl transition duration-300 mix-blend-multiply"
-          />
+        <a href="https://github.com/mykoo7" target="_blank" rel="noopener noreferrer" class="inline-block max-w-full h-auto rounded-lg hover:shadow-rose-950 hover:-translate-y-1 hover:shadow-xl transition duration-300 mix-blend-multiply">
+          <PhGithubLogo :size="32" weight="fill" class="text-rose-950" />
         </a>
 
         <!--LINKEDIN PLUS LOGO FROM PHOSPHOR ICONS-->
 
-        <a href="https://www.linkedin.com/in/mykoopon/" target="_blank" rel="noopener noreferrer" class="inline-block"
-        >
-          <img src="/images/index/linkedin-logo.png"
-            alt="LinkedIn"
-            class="max-w-full h-auto rounded-lg hover:shadow-rose-950 hover:-translate-y-1 hover:shadow-xl transition duration-300 mix-blend-multiply"
-          />
+        <a href="https://www.linkedin.com/in/mykoopon/" target="_blank" rel="noopener noreferrer" class="inline-block max-w-full h-auto rounded-lg hover:shadow-rose-950 hover:-translate-y-1 hover:shadow-xl transition duration-300 mix-blend-multiply">
+          <PhLinkedinLogo :size="32" weight="fill" class="text-rose-950" />
         </a>
       </div>
 
@@ -50,6 +42,8 @@
 
 <!--PAGE TITLE/ SEO META TAGS-->
 <script setup>
+import {PhGithubLogo, PhLinkedinLogo} from '@phosphor-icons/vue' //ICONS FROM PHOSPHOR
+
 useHead({
   title: 'Home | Yesha Opon'
 })

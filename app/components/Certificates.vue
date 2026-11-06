@@ -16,9 +16,8 @@
       class="text-rose-950 text-lg font-extrabold"
     >
       <span class="inline-flex items-center gap-2 hover:underline">
-      {{ name }}
-
-        <img src="/images/certifications/verified.png" alt="Verified" class="w-5 h-5 shrink-0"/> <!--VERIFICATION LOGO FROM LUCIDE ICONS-->
+        <PhSealCheck :size="20" weight="fill" /> <!--LOGO FROM PHOSPHOR ICONS-->
+      {{ name }} 
       </span>
     </a>
 
@@ -27,6 +26,8 @@
 
 <!--PASSES INFO OF THE CERT NAME AND PIC AND LINK FROM THE CERT PAGE-->
 <script setup>
+import { PhSealCheck } from '@phosphor-icons/vue';
+
 defineProps({
   name: {
     type: String,
