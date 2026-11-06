@@ -7,7 +7,7 @@
             </h1>
 
             <p class="text-sm text-center text-rose-900 mt-3 pb-3">
-                An overview of my recent public GitHub commits and developmnent activity.
+                An overview of my recent public GitHub commits and development activity.
             </p>
         </div>
 

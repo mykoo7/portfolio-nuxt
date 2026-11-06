@@ -18,28 +18,28 @@
     <div class="breadcrumbs">
       <ul>
         <li>
-          <NuxtLink to="/" @click="isMenuOpen = false">
+          <NuxtLink to="/" @click="isMenuOpen = false" class="inline-flex items-center gap-2">
             <PhHouse :size="20" weight="regular" />
             Home
           </NuxtLink>
         </li>
 
         <li>
-          <NuxtLink to="/about-me" @click="isMenuOpen = false">
+          <NuxtLink to="/about-me" @click="isMenuOpen = false" class="inline-flex items-center gap-2">
             <PhUser :size="20" weight="regular" />
             About
           </NuxtLink>
         </li>
 
         <li>
-          <NuxtLink to="/tech-stack" @click="isMenuOpen = false">
+          <NuxtLink to="/tech-stack" @click="isMenuOpen = false" class="inline-flex items-center gap-2">
             <PhCode :size="20" weight="regular" />
             Tech Stack
           </NuxtLink>
         </li>
 
         <li>
-          <NuxtLink to="/cert" @click="isMenuOpen = false">
+          <NuxtLink to="/cert" @click="isMenuOpen = false" class="inline-flex items-center gap-2">
             <PhCertificate :size="20" weight="regular" />
             Certification
           </NuxtLink>
