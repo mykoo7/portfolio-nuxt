@@ -62,6 +62,7 @@ header {
     color: oklch(27.1% 0.105 12.094);
 }
 
+
 /* MOBILE NAVIGATION */
 @media (max-width: 640px) {
     header {
@@ -74,45 +75,115 @@ header {
         flex-wrap: wrap;
     }
 
+    /* HAMBURGER */
     .hamburger {
         display: block;
         font-size: 2rem;
         cursor: pointer;
     }
 
+    /* DROPDOWN CONTAINER */
     .breadcrumbs {
         display: none !important;
         position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: oklch(89.2% 0.058 10.001);
-        padding: 20px 0;
+        top: calc(100% + 2px);
+        right: 20px;
+        left: auto;
+        transform: none;
+        width: 260px;
+        padding: 0;
+        background: transparent;
         justify-content: center;
         z-index: 999;
     }
 
+    /* SHOW MENU */
     header.open .breadcrumbs {
         display: flex !important;
-    }
-
-    .breadcrumbs ul {
         flex-direction: column;
         align-items: center;
-        gap: 15px;
-        padding: 0;
-        margin: 0;
     }
 
-    .breadcrumbs a {
-        text-align: center;
+    /* NAVIGATION PANEL */
+    .breadcrumbs ul {
+        display: flex;
+        flex-direction: column;
         width: 100%;
-        display: block;
-        padding: 10px 0;
+        gap: 5px;
+        padding: 10px;
+        margin: 0;
+        list-style: none;
+
+        background: rgba(255, 228, 230, 0.94);
+        backdrop-filter: blur(12px);
+
+        border: 2px solid rgba(190, 24, 93, 0.4);
+        border-radius: 14px;
+
+        box-shadow: 0 5px 15px rgba(76, 5, 25, 0.18);
     }
 
+    /* LIST ITEMS */
+    .breadcrumbs ul li {
+        width: 100%;
+    }
+
+    /* NAVIGATION LINKS */
+    .breadcrumbs a {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        width: 100%;
+        box-sizing: border-box;
+        gap: 12px;
+        padding: 11px 12px;
+
+        border-radius: 8px;
+        text-align: left;
+
+        transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    /* HOVER EFFECT */
+    .breadcrumbs a:hover {
+        background: rgba(244, 63, 94, 0.18);
+    }
+
+    /* CURRENT PAGE */
+    .breadcrumbs a.router-link-active {
+        background: rgba(244, 63, 94, 0.18);
+        color: #9F1239;
+    }
+
+    /* ICON ALIGNMENT */
+    .nav-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        flex-shrink: 0;
+    }
+
+    /* REMOVE BREADCRUMB SEPARATORS */
     .breadcrumbs li + li::before {
+        display: none;
+    }
+}
+
+/* HIDE NAVIGATION ICONS ON DESKTOP */
+.nav-icon {
     display: none;
+}
+
+/* SHOW NAVIGATION ICONS ON MOBILE */
+@media (max-width: 768px) {
+    .nav-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        flex-shrink: 0;
     }
 }
 

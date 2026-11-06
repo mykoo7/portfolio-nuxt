@@ -19,28 +19,36 @@
       <ul>
         <li>
           <NuxtLink to="/" @click="isMenuOpen = false" class="inline-flex items-center gap-2">
-            <PhHouse :size="20" weight="regular" />
+            <span class="nav-icon">
+              <PhHouse :size="20" weight="regular"/>
+            </span>
             Home
           </NuxtLink>
         </li>
 
         <li>
           <NuxtLink to="/about-me" @click="isMenuOpen = false" class="inline-flex items-center gap-2">
-            <PhUser :size="20" weight="regular" />
+            <span class="nav-icon">
+              <PhUser :size="20" weight="regular" />
+            </span>
             About
           </NuxtLink>
         </li>
 
         <li>
           <NuxtLink to="/tech-stack" @click="isMenuOpen = false" class="inline-flex items-center gap-2">
-            <PhCode :size="20" weight="regular" />
+            <span class="nav-icon">
+              <PhCode :size="20" weight="regular" />
+            </span>
             Tech Stack
           </NuxtLink>
         </li>
 
         <li>
           <NuxtLink to="/cert" @click="isMenuOpen = false" class="inline-flex items-center gap-2">
-            <PhCertificate :size="20" weight="regular" />
+            <span class="nav-icon">
+              <PhCertificate :size="20" weight="regular" />
+            </span>
             Certification
           </NuxtLink>
         </li>
