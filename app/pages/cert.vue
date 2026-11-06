@@ -70,7 +70,7 @@ function closeModal() {
 import { ref } from 'vue'
 /*PAGE TITLE*/
 useHead({
-  title: 'Certification | Yesha Opon'
+  title: 'Certification | Yesha Opon',
 })
 
 useSeoMeta({
@@ -78,7 +78,5 @@ useSeoMeta({
   description: 'Certificates earned by Yesha Opon.',
   ogTitle: 'Certificates | Yesha Opon',
   ogDescription: 'Certificates earned by Yesha Opon.',
-  ogImage: '/images/opon-profile.jpg',
-  twitterCard: 'summary_large_image',
 })
 </script>
